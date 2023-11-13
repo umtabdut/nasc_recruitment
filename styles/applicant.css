@@ -1,0 +1,85 @@
+body{
+	background: #f4f4f4;
+	font-family: "Lucida Sans";
+	font-size: 1.05em;
+	position: relative;
+}
+
+.application-preview{
+	--pp: 1em;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0 0 1px #333;
+	padding: var(--pp);
+	max-width: 800px;
+	display: flex;
+	align-items: center;
+	flex-shrink: all;
+	height: calc(1018px * 3.9);
+	/*min-height: 1018px; A4 height*/
+	color: #222;
+	position: relative;
+	border: 1px solid #333;
+}
+
+.application-preview h1{
+	color: #444;
+	text-align: center;
+	border-bottom: .25em solid #333;
+	padding-bottom: .25em;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+}
+.application-preview > div{
+	position: absolute;
+}
+
+.profile_upload{
+	top: 110px;
+	right: var(--pp);
+	width: 130px;
+	height: 180px;
+}
+.profile_upload img{
+	width: 130px;
+	height: 180px;	
+	border: 1px solid #333;
+}
+.user_rec_id{
+	top: 230px;
+	right: calc(var(--pp) + 140px);
+	text-align: right;
+	/*border: 1px solid red;*/
+	width: 200px;
+}
+.user_rec_id span{
+	font-weight: 700;
+}
+.details{
+	top: 300px;
+	border-top: .25em solid rgba(0,0,0,.075);
+	right: var(--pp);
+	left: var(--pp);
+}
+.details > div{
+	display: flex;
+	/*grid-template-areas: '. .';*/
+	padding: .25em 0;
+}
+.details > div:nth-child(even){
+	background: rgba(0,0,0,.025);
+}
+.details > div p{
+	flex: 2;
+	font-size: .7em;
+	font-weight: 600;
+	text-align: right;
+	padding: 0 1.5em;
+}
+.details > div span{
+	flex: 5;
+	padding: 0 1.5em;
+	font-weight: 600;
+}

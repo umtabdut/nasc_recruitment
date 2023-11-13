@@ -1,0 +1,290 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #f4f4f4;
+	font-family: "Lucida Sans";
+	font-size: 1.05em;
+}
+header{
+	display: flex;
+	align-items: flex-end;
+	background: #67a777;
+}
+header img.logo{
+	height: 80px;
+}
+header nav ul{
+	display: flex;
+}
+header nav li{
+	display: inline-block;
+	list-style: none;
+}
+header nav a{
+	padding: 1em;
+	display: block;
+	color: #f9f9f9;
+	font-weight: 900;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+header nav a:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	background: rgba(0,0,0,.2);
+	position: absolute;
+	transition: .25s;
+}
+header nav a:hover:before {
+	top: 0;
+}
+.welcome{
+	position: relative;
+	height: 500px;
+	background: red;
+}
+.banner{
+	width: 100%;
+	height: 100%;	
+	position: absolute;
+}
+.welcome .wrap{
+	position: absolute;
+	/*background: rgba(0,0,0,.13);*/
+	display: flex;
+	padding: 1em;
+	/*height: 100%;*/
+	top: 50%;
+	transform: translateY(-50%);
+	align-items: center;
+}
+.welcome .wrap div{
+	/*background: red;*/
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	color: #f6f5f5;
+	text-shadow: 0 0 5px #333;
+	padding: 1em;
+}
+.welcome .wrap center{
+	margin-top: 1em;
+}
+.welcome .wrap a{
+	padding: 1em;
+	text-shadow: 0 0 5px transparent;
+	box-shadow: 0 0 10px #777;
+	text-decoration: none;
+	background: linear-gradient(90deg, #46fc89 0%, #46cf89 80%);
+	transition: .25s;
+	color: #00067a;
+}
+.welcome .wrap a:hover{
+	background: linear-gradient(100deg, #46fc89 0%, #46cf89 40%);
+}
+/*table*/
+div.table{
+	margin: 1em;
+}
+table th, table td{ text-align: left; padding: 0 5px; }
+table{
+	margin: 1em;
+}
+table.table{
+	border-top: 1px solid #dadada;
+	border-collapse: collapse;
+	width: 100%;
+}
+.table thead th{
+	line-height: 3;
+	background: #5f5f5f;
+}
+.table tbody tr{
+	line-height: 2;
+	transition: .25s;
+}
+.table tbody tr:hover{
+	background: #f9f9f9;
+}
+.table-bordered{
+	border: 1px solid #dadada;
+}
+.table thead th{
+	border-bottom: 2px solid #dadada;
+}
+.table tbody td{
+	border-bottom: 1px solid #dadada;
+}
+.table-bordered thead th, .table-bordered tbody td{
+	border: 1px solid #dadada;
+}
+.table-bordered tbody tr td:last-child{
+	border-right: none;	
+}
+.table-bordered tbody tr:last-child td{
+	border-bottom: none;
+}
+.table-striped tr:nth-child(even){
+	background: #f3f3f3;
+}
+.table-hover tr:hover{
+	background: #f5f5f5;
+}
+a.btn{
+	text-decoration: none;
+	background: #f5f5f5;
+	padding: .25em;
+	color: #444;
+	border-radius: .25em;
+	border: 1px solid #ddd;
+}
+a.btn:hover{
+	background: #d9d9d9;
+}
+form {
+	box-shadow: 0 0 6px 0px #333;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em;
+	background: #fff;
+}
+input, select, textarea{
+	background: #f9f9f9;
+}
+input:hover, select:hover, textarea:hover{
+	background: #fff;
+}
+input:active, select:active, textarea:active{
+	background: #fff;
+}
+form.recruitment > div.form-control{
+	display: flex;
+	/*justify-content: flex-start;*/
+	margin: .8em 0;
+	/*padding: .5em 0;*/
+	/*border: 1px solid #ddd;*/
+	border-radius: 6px;
+	align-items: flex-start;
+}
+form.recruitment{
+	margin: 1em auto;
+}
+form.recruitment > div label{
+	width: 200px;
+}
+form.recruitment > div input, form.recruitment > div select{
+	flex: 1;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 10px;
+	outline: transparent;
+}
+form.recruitment .detail{
+	display: grid;
+	grid-template-areas: '. . . .';
+	grid-gap: 10px;
+}
+.recruitment-form-nav{
+	margin: 2em 1em 1em 1em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: 600;
+}
+form button, form.recruitment a{
+	text-decoration: none;
+	outline: transparent;
+	border-radius: .3em;
+	border: none;
+	color: inherit;
+	padding: .8em;
+	display: inline-block;
+	box-shadow: 0 0 3px #999;
+	font-weight: 600;
+	background: #65A6FA;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto !important;
+}
+form button[type='reset']{
+	background: #ff9967;
+	padding: .5em;
+}
+form button[type='submit']{
+	width: 200px;
+}
+form.recruitment center{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+form.recruitment a{
+	background: #55f6a7;
+	padding: .4em;
+}
+.recruitment-form-nav a{
+	text-decoration: none;
+	color: inherit;
+	background: #f4f5df;
+	padding: 1em;
+	margin: .4em;
+	display: inline-block;
+	box-shadow: 0 0 3px #999;
+}
+.dashboard{
+	display: flex;
+	min-height: 90vh;
+}
+.dashboard div:nth-child(1){
+	flex: 1;
+	background: #f5f5f5;
+}
+.dashboard div:nth-child(2){
+	flex: 5;
+	padding: 1em;
+	background: #fff;
+}
+.dashboard div nav li
+{
+	list-style: none;
+}
+.dashboard div nav li a
+{
+	text-decoration: none;
+	display: block;
+	padding: .25em;
+	color: #444;
+}
+.dashboard div nav li a:hover
+{
+	background: #f5f5f5;
+	color: #000;
+}
+.staffs{
+	display: grid;
+	grid-template-areas: '. . .';
+	/*min-height: 80vh;*/
+	/*padding: 1em;*/
+}
+.staff{
+	display: flex;
+	margin: .25em;
+	border: 1px solid #f0f0f0;
+	font-weight: 500;
+	align-items: center;
+}
+/*.staff div{
+	flex: 1;
+}*/
+.staff:hover{
+	background: #f0f2f5;
+}
